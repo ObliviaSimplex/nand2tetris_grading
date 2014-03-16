@@ -1,0 +1,15 @@
+  Here are the marking scripts for 2121.  I've left in a few Lab01 submissions so you can see the format things are expected to be in... hopefully Moodle hasn't changed its naming conventions.  You should also update "list.csv" to have the current class roster downloaded from Moodle.
+
+  Example usage, for marking Lab01:
+
+$ ./01-makeworkdir.sh 2121L01final # this just extracts things from the Moodle download into /working/
+$ ./02-cleanfiles.sh L01 # this removes unexpected files (e.g. don't let them supply their own .tst files ;)), flattens directories, adds the correct .tst files from L01
+$ ./03-evalproject.sh L01 | tee marks/L01.out.csv # runs TECS using the test files in $1
+$ # at this point I'd assign partial marks, weight columns etc. in *.out.csv and save it as *.marks.csv
+$ ./util-moodlerize.sh marks/L01.marks.csv # uses list.csv to convert to Moodle's stupid pseudo-CSV format for importing
+
+  Just give a shout if you have any questions... things to be wary of would be me using ~atwater anywhere I felt lazy, and me hating spaces in filenames and so not putting quotes in where I should be. ;) Also there's a util-markassembler.sh for when you get to doing the Assembler project.
+
+Cheers,
+Aaron
+atwater@cs.dal.ca

@@ -1,0 +1,15 @@
+And.tst
+Or.tst
+Not.tst
+Xor.tst
+And16.tst
+Or16.tst
+Or8Way.tst
+Not16.tst
+Mux.tst
+Mux16.tst
+Mux4Way16.tst
+Mux8Way16.tst
+DMux.tst
+DMux4Way.tst
+DMux8Way.tst
