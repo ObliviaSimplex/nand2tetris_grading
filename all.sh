@@ -5,4 +5,6 @@ if [ $# != 1 ]; then
   exit
 fi
 
-./03-evalproject.sh $1 | tee marks/$1.out.csv | tee marks/$1.marks.csv
+./prep.sh $1
+./grade.sh $1
+./moodlerize.sh $1
