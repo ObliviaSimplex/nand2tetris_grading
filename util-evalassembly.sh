@@ -30,7 +30,7 @@ grade_ASM() {
   # Test if the file exists
   if [ ! -f "$ASM" ]; then
     echo -n ",0"
-    ERR=$(echo -e "${ERR}\n${TEST_SCRIPT}: ${ASM} not found");
+    ERR=$(echo -e "${ERR}<br \/>${TEST_SCRIPT}: ${ASM} not found");
     return
   fi
 
@@ -38,7 +38,7 @@ grade_ASM() {
   result=$($TECS/Assembler.sh $ASM 2>&1)
   if [ ! "$result" == "" ]; then
     echo -n ",0"
-    ERR=$(echo -e "${ERR}\n${ASM}: Assembler.sh error")
+    ERR=$(echo -e "${ERR}<br \/>${ASM}: Assembler.sh error")
     return
   fi
 

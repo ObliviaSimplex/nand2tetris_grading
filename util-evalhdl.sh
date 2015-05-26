@@ -28,7 +28,7 @@ grade_HDL() {
   # Test if the file exists
   if [ ! -f "$TO_TEST/$HDL" ]; then
     echo -n ",0"
-    ERR=$(echo -e "${ERR}\n${HDL}: not found")
+    ERR=$(echo -e "${ERR}<br \/>${HDL}: not found")
     return
   fi
 
@@ -42,7 +42,7 @@ grade_HDL() {
     CORRECT=$(expr $CORRECT + 1)
   else
     echo -n ",0"
-    ERR=$(echo -e "${ERR}\n${TEST_SCRIPT}: $result")
+    ERR=$(echo -e "${ERR}<br \/>${TEST_SCRIPT}: $result")
   fi
 
   # Put the HDL file back into TO_TEST to ensure each HDL file is marked in isolation
