@@ -8,3 +8,4 @@ fi
 ./prep.sh $1
 ./grade.sh $1
 ./moodlerize.sh $1
+./plagseek.sh $1
