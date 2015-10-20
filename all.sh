@@ -9,3 +9,4 @@ fi
 ./grade.sh $1
 ./moodlerize.sh $1
 ./plagseek.sh $1
+./plaggroup.sh $1 
